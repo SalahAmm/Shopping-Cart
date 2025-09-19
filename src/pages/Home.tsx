@@ -20,7 +20,6 @@ type CardInfoType = {
 }
 
 const Home = () => {
-
   const cardInfo: Array<CardInfoType> = [{
     icon: <ShoppingBag/>,
     title: 'Quality Products',
@@ -44,59 +43,59 @@ const Home = () => {
 
 ];
 
-
-
-
   return (
-    <>
-      <div className="h-screen">
-        <div className="h-4/10 flex justify-center bg-gradient-to-tl from-white via-white to-gray-200">
-          <div className="w-7/10 flex flex-col items-center justify-center ">
-            <div className="h-2/10 font-bold text-6xl">Welcome to ShopCart</div>
-            <div className="h-2/10 text-2xl text-center text-gray-500">
-              Discover amazing products at unbeatable prices. Your one-stop shop
-              for everything you need.
-            </div>
-            <div className="h-2/10 w-3/10 flex justify-center items-center gap-6">
-              <Button asChild className="w-40 hover:text-violet-600">
-                <Link to="/shop">
-                  {<ShoppingBag size={20} className="mr-2" />} Start Shopping
-                </Link>
-              </Button>
-              <Button asChild className="w-30 text-blue-500" variant="outline">
-                <Link to="/cart">View Cart</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="h-6/10 flex justify-center bg-gradient-to-tl  to-gray-100">
-          <div className="w-full flex flex-col items-center justify-center ">
-            <div className="h-1/10 font-bold text-4xl">
-              Why Choose ShopCart?
-            </div>
-            <div className="h-2/11 w-7/10  text-lg text-center text-gray-500">
-        We're committed to providing the best shopping experience with exceptional service and quality products.             
-            </div>
-            <div className="w-9/10 grid grid-cols-4 gap-4">
-              {cardInfo.map(({icon , title, info}, index) => (
-                <Card key={index} className=" text-center hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex flex-col items-center gap-6">
-                      <div className="border rounded-full bg-gray-300 p-3">{icon}</div>
-                      <p className="font-semibold text-lg">{title}</p>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-center">{info}</p>
-                  </CardContent>
-                </Card>
-              ))} 
-            </div>
+    <div className="h-screen flex flex-col">
+      <div className="flex-none py-8 md:py-16 flex justify-center bg-gradient-to-tl from-white via-white to-gray-200">
+        <div className="w-[90%] md:w-[70%] flex flex-col items-center justify-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-6">Welcome to ShopCart</h1>
+          <p className="text-lg md:text-2xl text-center text-gray-500 mb-8">
+            Discover amazing products at unbeatable prices. Your one-stop shop
+            for everything you need.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+            <Button asChild className="w-full sm:w-40 hover:text-violet-600">
+              <Link to="/shop">
+                <ShoppingBag size={20} className="mr-2" /> Start Shopping
+              </Link>
+            </Button>
+            <Button asChild className="w-full sm:w-40 text-blue-500" variant="outline">
+              <Link to="/cart">View Cart</Link>
+            </Button>
           </div>
         </div>
       </div>
-    </>
+
+      <div className="flex-1 flex justify-center bg-gradient-to-tl to-gray-100">
+        <div className="w-[90%] flex flex-col items-center justify-evenly py-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-center">
+              Why Choose ShopCart?
+            </h2>
+            <p className="text-base md:text-lg text-center text-gray-500 max-w-3xl">
+              We're committed to providing the best shopping experience with exceptional service and quality products.
+            </p>
+          </div>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {cardInfo.map(({icon , title, info}, index) => (
+              <Card key={index} className=" text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex flex-col items-center gap-6">
+                    <div className="border rounded-full bg-gray-300 p-3">{icon}</div>
+                    <p className="font-semibold text-lg">{title}</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center">{info}</p>
+                </CardContent>
+              </Card>
+            ))} 
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
+
+
 
 export default Home;

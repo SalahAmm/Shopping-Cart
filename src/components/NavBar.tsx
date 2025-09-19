@@ -4,13 +4,13 @@ import { Home, ShoppingBag, ShoppingCart } from "lucide-react";
 
 const NavBar = () => {
   return (
-    <>
-      <div className="border-b-1 w-9/10 h-16 m-auto flex justify-between">
-        <div className="p-4 text-xl font-bold  ">
+    <nav className="border-b-1 h-auto md:h-16 m-auto">
+      <div className="flex flex-col md:flex-row md:justify-between p-4">
+        <div className="text-xl font-bold text-center md:text-left">
           <NavLink to="home">ShopCart</NavLink>
         </div>
 
-        <div className="flex gap-8 justify-center items-center p-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center py-4 md:py-0">
           <NavLink to="/home">
             {({ isActive }) =>
               isActive ? (
@@ -58,7 +58,7 @@ const NavBar = () => {
           </NavLink>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 
