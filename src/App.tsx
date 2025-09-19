@@ -10,7 +10,7 @@ function App() {
   
   return (
     <>
-    <div className='min-h-screen w-5/6 m-auto p-5'>
+    <div className='min-h-screen w-4/6 m-auto p-5'>
       <NavBar/>
       <Outlet/>
     </div>
