@@ -2,7 +2,7 @@ import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { Truck, Shield, Star } from "lucide-react";
-import React, { type ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import {
   Card,
   CardHeader,
