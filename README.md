@@ -1,8 +1,8 @@
 # Shopping Cart
 
 A modern e-commerce shopping cart application built with React, TypeScript, and Tailwind CSS.
-https://shopping-cart-typescriptt.netlify.app/home
-
+--
+https://shopping-cart-lemon-ten.vercel.app/
 ## Features
 
 - Browse products fetched from external API
